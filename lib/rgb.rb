@@ -5,5 +5,8 @@ def to_hex(a, b, c)
 end
 
 def to_ints(hex)
-  [0, 0, 0]
+  r = hex[1..2]
+  g = hex[3..4]
+  b = hex[5..6]
+  [r, g, b].map { |h| h.hex }
 end
